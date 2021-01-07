@@ -17,7 +17,7 @@ export const mailSlice = createSlice({
     },
     closeSendMessage: (state) => {
       console.log('closeSendMessage call')
-      state.sendMessageIsOpen = !state.sendMessageIsOpen;
+      state.sendMessageIsOpen = false;
       console.log("closesendMessage is " + state.sendMessageIsOpen)
     },
   },
