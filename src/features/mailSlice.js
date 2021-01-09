@@ -10,6 +10,7 @@ export const mailSlice = createSlice({
     selectMail: (state,action) => {
       state.selectedMail = action.payload;
     },
+    // Error can be found in two functions below
     openSendMessage: (state) => {
       console.log('openSendMessage call')
       state.sendMessageIsOpen = true;

@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { IconButton } from '@material-ui/core'
 import { ArrowDropDown, CheckBoxOutlineBlank, ChevronLeft, ChevronRight, Inbox, KeyboardHide, LocalOffer, MoreVert, People, Redo, Settings } from '@material-ui/icons'
-import Section from './Section'
+import Section from '../Section/Section'
 import './EmailList.css'
-import EmailRow from './EmailRow'
-import { db } from './firebase'
+import EmailRow from '../EmailRow/EmailRow'
+import { db } from '../../firebase'
 
 function EmailList() {
     const [emails, setEmails] = useState([]);

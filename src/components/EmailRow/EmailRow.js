@@ -4,7 +4,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import './EmailRow.css'
-import { selectMail } from './features/mailSlice'
+import { selectMail } from '../../features/mailSlice'
 
 function EmailRow({ id, title, subject, description, time}) {
     const history = useHistory();

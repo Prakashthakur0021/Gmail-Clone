@@ -5,8 +5,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import {Avatar, IconButton } from '@material-ui/core';
 import { Apps, ArrowDropDown,Notifications } from '@material-ui/icons';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout, selectUser } from './features/userSlice';
-import { auth } from './firebase';
+import { logout, selectUser } from '../../features/userSlice';
+import { auth } from '../../firebase';
 
 function Header() {
     const user = useSelector(selectUser);

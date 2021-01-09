@@ -3,9 +3,9 @@ import { Close } from '@material-ui/icons'
 import React from 'react'
 import { useForm} from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { closeSendMessage } from './features/mailSlice'
+import { closeSendMessage } from '../../features/mailSlice'
 import './SendMail.css'
-import {db} from './firebase'
+import {db} from '../../firebase'
 import firebase from 'firebase';
 
 function SendMail() {

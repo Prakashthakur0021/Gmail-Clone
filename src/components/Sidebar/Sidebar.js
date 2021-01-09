@@ -4,10 +4,10 @@ import './Sidebar.css'
 import AddIcon from "@material-ui/icons/Add"
 import InboxIcon from "@material-ui/icons/Inbox"
 import StarIcon from "@material-ui/icons/Star"
-import SidebarOption from './SidebarOption'
+import SidebarOption from '../SidebarOption/SidebarOption'
 import { AccessTime, Duo, ExpandMore, LabelImportant, NearMe, Note, Person, Phone } from '@material-ui/icons'
 import { useDispatch } from 'react-redux'
-import { openSendMessage } from './features/mailSlice'
+import { openSendMessage } from '../../features/mailSlice'
 
 function Sidebar() {
     const dispatch = useDispatch();
@@ -16,10 +16,9 @@ function Sidebar() {
         dispatch(openSendMessage())
     }
 
-
     return (
         <div className="sidebar">
-             {/* Can be error in openSendMessage  */}
+             {/* Error can be in sendMessage function  */}
             <Button startIcon={<AddIcon fontSize="large" />} className="sidebar__compose" onClick={() => sendMessage()}>Compose</Button>
 
             <SidebarOption Icon={InboxIcon} title="Inbox" number={25} selected={true} />
