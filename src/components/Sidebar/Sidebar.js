@@ -12,14 +12,10 @@ import { openSendMessage } from '../../features/mailSlice'
 function Sidebar() {
     const dispatch = useDispatch();
 
-    const sendMessage = () => {
-        dispatch(openSendMessage())
-    }
-
     return (
         <div className="sidebar">
              {/* Error can be in sendMessage function  */}
-            <Button startIcon={<AddIcon fontSize="large" />} className="sidebar__compose" onClick={() => sendMessage()}>Compose</Button>
+            <Button startIcon={<AddIcon fontSize="large" />} className="sidebar__compose" onClick={() => dispatch(openSendMessage())}>Compose</Button>
 
             <SidebarOption Icon={InboxIcon} title="Inbox" number={25} selected={true} />
             <SidebarOption Icon={StarIcon} title="Starred" number={25}  />
